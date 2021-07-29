@@ -18,6 +18,6 @@ public class Score : MonoBehaviour
     
     private void OnScoreChanged(int newScore)
     {
-        _scoreDisplay.text = newScore.ToString();
+        _scoreDisplay.text = "Score: " + newScore.ToString();
     }
 }
