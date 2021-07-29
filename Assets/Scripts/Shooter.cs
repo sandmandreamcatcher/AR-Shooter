@@ -7,9 +7,12 @@ public class Shooter : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount > 0)
         {
-            Instantiate(_bulletTemplate, _shootPoint);
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                Instantiate(_bulletTemplate, _shootPoint);
+            }
         }
     }
 }
